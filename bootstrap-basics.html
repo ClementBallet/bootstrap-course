@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Basics</title>
+    <!-- CDN Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- 
+        Envelopper vos contenus dans un élément avec la classe .container permet de centrer votre contenu à l’écran en y ajoutant des marges horizontales automatiques. 
+        Ne convient donc pas aux sites en full page ! 
+    -->
+    <div class="container">
+        <h1>Container</h1>
+    </div>
+
+    <!-- 
+        Si vous voulez que le contenu occupe toujours 100 % de la largeur de l’écran, vous pouvez utiliser la classe .container-fluid à la place. 
+    -->
+    <div class="container-fluid">
+        <h1>Container fluid</h1>
+    </div>
+
+    <!-- 
+        Depuis Bootstrap 5, de nouveaux containers sont arrivés :  .container-{breakpoint}  (exemple : .container-lg). 
+        Ils permettent d’adapter votre “container” en fonction de la taille d’écran de l’utilisateur.
+
+        J'ai rajouté une classe utilitaire qui ajoute une couleur de fond à chaque éléments pour bien visualiser les breakpoints.
+        Retrouver ces classes utilitaires dans Helpers > Color & background.
+     -->
+    <div class="container-sm text-bg-primary my-1">100% wide until small breakpoint</div>
+    <div class="container-md text-bg-secondary my-1">100% wide until medium breakpoint</div>
+    <div class="container-lg text-bg-success my-1">100% wide until large breakpoint</div>
+    <div class="container-xl text-bg-danger my-1">100% wide until extra large breakpoint</div>
+    <div class="container-xxl text-bg-warning my-1">100% wide until extra extra large breakpoint</div>
+
+    <!-- 
+        Le système de grille permet la disposition des éléments : 
+        - row pour les lignes
+        - col pour les colonnes (par défaut, les colonnes occupent toutes la mêmes largeurs, donc 50/50, 33/33/33, 25/25/25/25, etc)
+
+        J'ai également utilisé la classe utilitaire text-center pour centrer le texte et column-gap-3 pour ajouter de l'espacement entre mes colonnes.
+     -->
+    <div class="container text-center my-1">
+        <div class="row column-gap-3">
+            <div class="col text-bg-primary">
+                Column 50% (6/12)
+            </div>
+            <div class="col text-bg-success">
+                Column 50% (6/12)
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+        Si les colonnes ne sont pas de tailles égales, on peut préciser un nombre, tout en gardant à l'esprit que Bootstrap se base sur une grille de 12 colonnes.
+     -->
+    <div class="container text-center my-1">
+        <div class="row">
+            <div class="col-4 text-bg-primary">
+                Column 4/12
+            </div>
+            <div class="col-8 text-bg-success">
+                Column 8/12
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+        Un exemple de responsive avec 2 colonnes qui prennent :
+        - 100% de la taille du container en dessous de md (768 px) pour les tablettes et mobiles
+        - 50/50 en dessus (desktop)
+     -->
+    <div class="container text-center my-1">
+        <div class="row">
+            <div class="col-md-6 text-bg-primary">
+                Column 1
+            </div>
+            <div class="col-md-6 text-bg-success">
+                Column 2
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center my-1">
+        <div class="row">
+            <div class="col-md-4 offset-md-1 text-bg-primary">
+                Column 1
+            </div>
+            <div class="col-md-3 offset-md-4 text-bg-success">
+                Column 2
+            </div>
+        </div>
+    </div>
+
+
+    <!-- CDN Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
